@@ -1,28 +1,5 @@
 <% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info'%>
-      </section>
-      <section class="user_info">
-        <%= render 'shared/micropost_form'%>
-      </section>
-    </aside>
-  </div>
+  <%= render 'static_page/user_logged_in'%>
 <% else %>
-  <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
-
-    <h2>
-      This is the home page for the
-      <a href="http://railstutorial.jp/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
-
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-        'http://rubyonrails.org/' %>
-        <%= image_tag("fox.png", alt: "fox") %>
+  <%= render 'static_page/user_not_logged_in'%>
 <% end %>
