@@ -22,7 +22,7 @@ end
 private
 
   def micropost_params
-    params.require(:micropost).permit(:content)
+    params.require(:micropost).permit(:content, :pictures)
   end
 
   def correct_user
