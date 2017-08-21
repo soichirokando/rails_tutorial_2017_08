@@ -75,4 +75,9 @@ class UserTest < ActiveSupport::TestCase
       @user.destroy
     end
   end
+
+  test "name should be present" do
+    @user.name = @user.valid?
+    emd
+  end
 end
